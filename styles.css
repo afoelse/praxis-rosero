@@ -431,6 +431,7 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 22px;
 }
 .service-card__icon svg { display: block; width: 30px; height: 30px; }
+.service-card__icon .icon-mask { width: 30px; height: 30px; }
 .service-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.18rem; color: var(--teal-deep); margin-bottom: 10px; }
 .service-card p { color: var(--muted); font-size: 0.95rem; }
 .services__cta { text-align: center; margin-top: 50px; }
@@ -617,11 +618,25 @@ img { border-radius: 0; }
   margin-bottom: 22px;
 }
 .service-detail__icon svg { display: block; width: 32px; height: 32px; }
+.service-detail__icon .icon-mask { width: 32px; height: 32px; }
 
 .icon--tooth, .icon--brush { color: var(--teal-dark); }
 .icon--scalpel { color: var(--teal-deep); }
 .icon--implant { color: var(--grey); }
 .icon--sparkle { color: #f2b90c; }
+
+.icon-mask {
+  display: block;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: center; mask-position: center;
+  -webkit-mask-size: contain; mask-size: contain;
+}
+.icon-mask--kiefer { background-color: var(--teal-dark); -webkit-mask-image: url("icons/icon-kiefer.png"); mask-image: url("icons/icon-kiefer.png"); }
+.icon-mask--zahnschmerz { background-color: var(--teal-dark); -webkit-mask-image: url("icons/icon-zahnschmerz.png"); mask-image: url("icons/icon-zahnschmerz.png"); }
+.icon-mask--prophylaxe { background-color: var(--teal-dark); -webkit-mask-image: url("icons/icon-prophylaxe.png"); mask-image: url("icons/icon-prophylaxe.png"); }
+.icon-mask--spritze { background-color: var(--teal-deep); -webkit-mask-image: url("icons/icon-spritze.png"); mask-image: url("icons/icon-spritze.png"); }
+.icon-mask--implantat { background-color: var(--grey); -webkit-mask-image: url("icons/icon-implantat.png"); mask-image: url("icons/icon-implantat.png"); }
+.icon-mask--diamant { background-color: #f2b90c; -webkit-mask-image: url("icons/icon-diamant.png"); mask-image: url("icons/icon-diamant.png"); }
 .service-detail h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--teal-deep); margin-bottom: 12px; }
 .service-detail > p { color: var(--muted); font-size: 1rem; }
 .service-detail__features { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 10px; margin-top: 22px; }
