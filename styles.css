@@ -194,6 +194,9 @@ a { color: inherit; text-decoration: none; }
 .lang-switch__btn .flag { font-size: 1rem; line-height: 1; }
 .lang-switch__btn.is-active { color: var(--teal-dark); }
 
+.flag { display: inline-flex; align-items: center; }
+.flag svg { display: block; width: 1.15em; height: 0.77em; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1); }
+
 .nav__cta { padding: 11px 20px; font-size: 0.92rem; }
 
 .nav__burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
@@ -232,7 +235,7 @@ a { color: inherit; text-decoration: none; }
   padding: 8px 16px;
   margin-bottom: 22px;
 }
-.hero__badge-pill::before { content: "🦷"; font-size: 0.95rem; }
+.hero__badge-pill svg { width: 14px; height: 14px; flex-shrink: 0; }
 
 .hero__subtitle { margin-top: 22px; font-size: 1.18rem; color: var(--muted); max-width: 520px; }
 
@@ -363,7 +366,8 @@ a { color: inherit; text-decoration: none; }
 .hero__float--rating strong { font-family: var(--font-display); font-size: 1.25rem; color: var(--teal-deep); }
 .hero__float--rating span { font-size: 0.78rem; color: var(--muted); }
 .hero__float--brand { bottom: 24px; left: -6px; font-family: var(--font-display); font-weight: 600; color: var(--teal-deep); }
-.hero__float-pin { font-size: 1.1rem; line-height: 1; }
+.hero__float-pin { display: inline-flex; width: 17px; height: 17px; }
+.hero__float-pin svg { display: block; width: 100%; height: 100%; }
 
 /* =============================== ABOUT =============================== */
 .about { padding: clamp(60px, 8vw, 110px) 0; }
@@ -424,9 +428,9 @@ a { color: inherit; text-decoration: none; }
   display: grid; place-items: center;
   background: var(--teal-soft);
   border-radius: 18px;
-  font-size: 1.7rem;
   margin-bottom: 22px;
 }
+.service-card__icon svg { display: block; width: 30px; height: 30px; }
 .service-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.18rem; color: var(--teal-deep); margin-bottom: 10px; }
 .service-card p { color: var(--muted); font-size: 0.95rem; }
 .services__cta { text-align: center; margin-top: 50px; }
@@ -610,9 +614,14 @@ img { border-radius: 0; }
   display: grid; place-items: center;
   background: var(--teal-soft);
   border-radius: 20px;
-  font-size: 1.9rem;
   margin-bottom: 22px;
 }
+.service-detail__icon svg { display: block; width: 32px; height: 32px; }
+
+.icon--tooth, .icon--brush { color: var(--teal-dark); }
+.icon--scalpel { color: var(--teal-deep); }
+.icon--implant { color: var(--grey); }
+.icon--sparkle { color: #f2b90c; }
 .service-detail h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.5rem; color: var(--teal-deep); margin-bottom: 12px; }
 .service-detail > p { color: var(--muted); font-size: 1rem; }
 .service-detail__features { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 10px; margin-top: 22px; }
