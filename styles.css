@@ -770,6 +770,14 @@ img { border-radius: 0; }
   .hero__buttons .btn { flex: 1; }
   .hero__float--rating { right: 0; }
   .hero__float--brand { left: 0; }
+
+  /* Mobile CTA adjustments */
+  .final-cta__inner {
+    padding: clamp(48px, 6vw, 84px) 20px;
+    margin: 0 -20px;
+  }
+  .final-cta__inner::before { width: 180px; height: 180px; top: -60px; right: -40px; }
+  .final-cta__inner::after { width: 140px; height: 140px; bottom: -70px; left: -40px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
