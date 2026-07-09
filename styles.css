@@ -3,6 +3,22 @@
    Helles, cleanes Design · Creme/Weiß + Petrolgrün · DM Sans + Space Grotesk
    ========================================================================= */
 
+/* Self-hosted fonts (DSGVO: keine Anfragen an Google-Server) */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/dm-sans.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("fonts/outfit.woff2") format("woff2");
+}
+
 :root {
   /* Farben */
   --cream: #f7f4ee;
@@ -254,13 +270,21 @@ a { color: inherit; text-decoration: none; }
 
 .rating { display: flex; align-items: center; gap: 16px; margin-top: 40px; }
 .rating__avatars { display: flex; }
-.rating__avatars img {
+.rating__avatars .avatar-initial {
   width: 46px; height: 46px; border-radius: 50%;
   border: 3px solid var(--cream);
-  object-fit: cover;
   margin-left: -12px;
 }
-.rating__avatars img:first-child { margin-left: 0; }
+.rating__avatars .avatar-initial:first-child { margin-left: 0; }
+.avatar-initial {
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 600; font-size: 0.95rem;
+  color: #fff;
+}
+.avatar-initial--1 { background: var(--teal); }
+.avatar-initial--2 { background: var(--teal-dark); }
+.avatar-initial--3 { background: var(--teal-deep); }
+.avatar-initial--4 { background: var(--grey); }
 .rating__stars { display: flex; align-items: center; gap: 8px; }
 .rating__stars strong { font-family: var(--font-display); font-size: 1.15rem; color: var(--teal-deep); }
 .rating__stars .stars { color: #f2b90c; letter-spacing: 1px; font-size: 0.95rem; }
@@ -448,8 +472,8 @@ a { color: inherit; text-decoration: none; }
 .review-card__stars { color: #f2b90c; letter-spacing: 2px; margin-bottom: 16px; }
 .review-card__text { color: var(--text); font-size: 0.98rem; flex: 1; }
 .review-card__author { display: flex; align-items: center; gap: 12px; margin-top: 22px; }
-.review-card__author img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; }
-.review-card__author span { font-weight: 600; font-family: var(--font-display); color: var(--teal-deep); font-size: 0.95rem; }
+.review-card__author .avatar-initial { width: 46px; height: 46px; }
+.review-card__author span:not(.avatar-initial) { font-weight: 600; font-family: var(--font-display); color: var(--teal-deep); font-size: 0.95rem; }
 
 /* ============================ FINAL CTA ============================ */
 .final-cta { padding: clamp(60px, 7vw, 96px) 0; }
@@ -510,7 +534,6 @@ a { color: inherit; text-decoration: none; }
 
 /* ===================== GLOBAL: RUNDE FOTO-ECKEN ==================== */
 .photo { border-radius: var(--radius-lg); }
-.photo-round { border-radius: 50%; }
 img { border-radius: 0; }
 
 /* ========================= SUB-PAGE HERO ========================== */
