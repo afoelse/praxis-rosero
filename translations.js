@@ -136,7 +136,6 @@ const TRANSLATIONS = {
     "footer.legal_title": "Rechtliches",
     "footer.imprint": "Impressum",
     "footer.privacy": "Datenschutz",
-    "footer.copyright": "2026 © Zahnheilkunde Berlin Mitte",
 
     /* --- Rechtliche Seiten --- */
     "legal.lang_note": "Aus rechtlichen Gründen werden diese Angaben auf Deutsch geführt.",
@@ -265,7 +264,6 @@ const TRANSLATIONS = {
     "footer.legal_title": "Legal",
     "footer.imprint": "Imprint",
     "footer.privacy": "Privacy",
-    "footer.copyright": "2026 © Dentistry Berlin Mitte",
 
     "legal.lang_note": "For legal reasons this information is provided in German.",
     "legal.template_note": "Template to fill in – please replace with your binding details and have them checked legally.",
@@ -393,7 +391,6 @@ const TRANSLATIONS = {
     "footer.legal_title": "Legal",
     "footer.imprint": "Aviso legal",
     "footer.privacy": "Privacidad",
-    "footer.copyright": "2026 © Odontología Berlin Mitte",
 
     "legal.lang_note": "Por motivos legales, esta información se ofrece en alemán.",
     "legal.template_note": "Plantilla para rellenar: sustitúyala por sus datos vinculantes y revísela legalmente.",
